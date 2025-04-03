@@ -4,15 +4,16 @@ import './App.css'
 import Batsman from './Batsman';
 import { Suspense } from 'react';
 import Posts from './Posts';
+import Players from './Playrs';
 
-const fetchPosts = async () => {
-     const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-     return res.json();
-}
+// const fetchPosts = async () => {
+//      const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+//      return res.json();
+// }
 
 function App() {
 
-   const postsPromise = fetchPosts()
+  //  const postsPromise = fetchPosts()
 
   function handleClink() {
     alert('I am Click')
@@ -30,11 +31,13 @@ function App() {
     <>
 
       <h1>Vite + React</h1>
+
+      <Players></Players>
       
-  <Suspense fallback = {<h4> Post are coming...</h4>}> 
+  {/* <Suspense fallback = {<h4> Post are coming...</h4>}> 
   <Posts postsPromise ={postsPromise}></Posts>
 
-  </Suspense>
+  </Suspense> */}
      
 
 
